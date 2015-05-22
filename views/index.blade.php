@@ -26,7 +26,9 @@
                         <td>
                           <button type="submit" value='publish' class="btn btn-primary"> <a href="/admin/blog/{{$value['slug']}}" style="text-decoration: none; color: white">Show</a> </button>
                         </td>
-                        <td>{{$value['id']}}</td>
+                        <td>{!!Form::open(['url'=>'/admin/blog/'.$value['id'].'/edit','method' => 'get'])!!}
+                            <button type="submit" value='publish' class="btn btn-primary"> edit </button>
+                            {!!Form::close()!!}</td>
                         <td>{!!Form::open(['url'=>'/admin/blog/'.$value['id'],'method' => 'delete'])!!}
                             <button type="submit" value='publish' class="btn btn-primary"> delete </button>
                             {!!Form::close()!!}

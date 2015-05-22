@@ -19,12 +19,12 @@
                       <input type="text" class="form-control" name='title' id="title" value="{{$post['title']}}">
                     </div>
                     <div class="form-group">
-                         <textarea class="textarea" value="{{$post['blogpost']}}" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" name='blogpost'></textarea>
+                         <textarea class="textarea"  style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" name='blogpost'>{{$post['blogpost']}}</textarea>
                     </div>
                   </div><!-- /.box-body -->
                   <div class="box-footer">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <button type="submit" value='publish' class="btn btn-primary">Post blog</button>
+                    <button type="submit" value='publish' class="btn btn-primary">edit Blog</button>
                   </div>
               </form>
    	</section>

@@ -83,7 +83,13 @@ class BlogController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$post = Blog::find($id)->toArray();
+
+		$navbar = ['dashboard'=>'','blog'=>'active','blogcreate'=>''];
+		
+
+		return view('Blog::edit',['navbar'=>$this->modules->checkAll(),'active'=>$navbar,'post'=>$post]);
+
 	}
 
 	/**
@@ -105,7 +111,8 @@ class BlogController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		dd('yes');
+		$blog = Blog::find($id)->delete();
+		return redirect()->back();
 	}
 
 }
