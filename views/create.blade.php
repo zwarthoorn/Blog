@@ -28,7 +28,9 @@
                     <button type="submit" value='publish' class="btn btn-primary">Post blog</button>
                   </div>
               </form>
-
+              {!! Form::open(['url'=>'/admin/blog', 'method'=>'get']) !!}
+             <button class="btn btn-primary">back</button>
+             {!! Form::close() !!}
               <script>
               var title = document.getElementById('title');
               var slug = document.getElementById('slug');

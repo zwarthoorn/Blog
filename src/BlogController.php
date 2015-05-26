@@ -86,7 +86,7 @@ class BlogController extends Controller {
 		$post = Blog::find($id)->toArray();
 
 		$navbar = ['dashboard'=>'','blog'=>'active','blogcreate'=>''];
-		
+
 
 		return view('Blog::edit',['navbar'=>$this->modules->checkAll(),'active'=>$navbar,'post'=>$post]);
 
@@ -100,7 +100,11 @@ class BlogController extends Controller {
 	 */
 	public function update($id)
 	{
-		//
+		$update = Blog::find($id);
+		$update->title = Request::get('title');
+		$update->blogpost = Request::get('blogpost');
+		$update->save();
+		return redirect('/admin/blog');
 	}
 
 	/**

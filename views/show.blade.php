@@ -38,8 +38,11 @@
                 </form>
 
              </div>
-              @endforeach
 
+              @endforeach
+             {!! Form::open(['url'=>'/admin/blog', 'method'=>'get']) !!}
+             <button class="btn btn-primary">back</button>
+             {!! Form::close() !!}
    	</section>
 
 @stop

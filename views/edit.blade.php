@@ -12,7 +12,7 @@
                   <h3 class="box-title">Make new Blog Post</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method='post' action='/admin/blog'>
+                {!! Form::open(['url'=>'/admin/blog/'.$post['id'],'method'=>'put']) !!}
                   <div class="box-body">
                     <div class="form-group">
                       <label for="title">Enter Title</label>
@@ -27,6 +27,9 @@
                     <button type="submit" value='publish' class="btn btn-primary">edit Blog</button>
                   </div>
               </form>
+               {!! Form::open(['url'=>'/admin/blog', 'method'=>'get']) !!}
+             <button class="btn btn-primary">back</button>
+             {!! Form::close() !!}
    	</section>
 
 @stop
