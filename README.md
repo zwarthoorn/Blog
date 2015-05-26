@@ -40,7 +40,7 @@ git init
 'Zwarthoorn\Blog\ServiceProvider'
 ```
 
-## and in the ailias
+#### and in the ailias
 
 ```php
 'Blog'=> 'Zwarthoorn\Blog\Facades\Blog',
