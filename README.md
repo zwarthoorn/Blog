@@ -1,38 +1,22 @@
-# Boilerplate Laravel 5 Package
+# Zwarthoorns Blog Module.
 
-
-
-```sh
-git clone --depth 1 git@github.com:cviebrock/laravel5-package-template.git
-```
-
-Rename the directory and re-init it as your own package:
-
-```sh
-mv laravel5-package-template my-package
-cd my-package
-rm -rf .git
-git init
-```
+this is a blog module build oppon main admin core Admincore also from me
+you need that package aswel else the Blog Module whont work.
+you can get it from package gist or from github.
+https://packagist.org/packages/zwarthoorn/admincore
 
 
 
 
 ```json
-{
-    "name": "vendor/package",
-    ...
-    "autoload": {
-        "psr-4": {
-            "Vendor\\Package\\": "src/"
-        }
+"require": {
+        "zwarthoorn/blog": "dev-master"
+        
     },
-    ...
-},
 ```
 
 
-### config/packagename.php
+### add service provider to the service provider array
 
 
 
