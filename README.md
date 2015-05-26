@@ -5,8 +5,16 @@ you need that package aswel else the Blog Module whont work.
 you can get it from package gist or from github.
 https://packagist.org/packages/zwarthoorn/admincore
 
+##information
+
+this package is using laravel 5.0.
+also it is using the laravel packages for form and html
+please install this by yourself.
 
 
+## instalation
+
+first you add this to the required field in your json file
 
 ```json
 "require": {
