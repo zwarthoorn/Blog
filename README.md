@@ -62,3 +62,23 @@ Blog::allBlogs();
 this will be a clean array with all the blogpost you have in your database.
 (functions for publish and concept are not done yet so it will not be a factor for now)
 
+
+you can also find a single blogpost with a slug all the blogpost are prefabt with a slug so dont hasetate.
+
+```php
+Blog::findBlog(slug);
+```
+and last but not least find a blog by slug and with all the response's with it already.
+
+```php
+Blog::findBlogWithResponse(slug);
+```
+
+this will create a nice array that will look like this
+
+```php
+array(
+'blogpost'=> your blogpost,
+'response'=> all the responses that are with this blogpost
+)
+```
