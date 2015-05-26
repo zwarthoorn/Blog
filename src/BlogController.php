@@ -68,11 +68,13 @@ class BlogController extends Controller {
 	public function show($id)
 	{
 		$navbar = ['dashboard'=>'','blog'=>'active','blogcreate'=>''];
-		$sender = Blog::where('slug','=',$id)->first()->toArray();
+		$sender = Blog::findBlog($id);
 		
 		$respons = Response::where('blogs_id','=',$sender['id'])->get()->toArray();
+		$all = Blog::findBlogWithResponse($id);
+
 		
-		return view('Blog::show',['navbar'=>$this->modules->checkAll(),'active'=>$navbar,'post'=>$sender,'respons'=>$respons]);
+		return view('Blog::show',['navbar'=>$this->modules->checkAll(),'active'=>$navbar,'post'=>$all['blogpost'],'respons'=>$all['response']]);
 	}
 
 	/**

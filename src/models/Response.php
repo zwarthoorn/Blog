@@ -11,4 +11,9 @@ class Response extends Model {
 	protected $table = 'responses';
 	protected $fillable = ['name', 'response','blogs_id'];
 
+	public function getSingleResponse($id)
+	{
+		return Self::find($id)->toArray();
+	}
+
 }
