@@ -79,6 +79,9 @@ this will create a nice array that will look like this
 ```php
 array(
 'blogpost'=> your blogpost,
-'response'=> all the responses that are with this blogpost
+'response'=> all the responses that are with this blogpost in a array
 )
 ```
+
+in a later date thare will be a function so you dont have to do valadation yourself and response woth have to come from you with a function.
+this will be added later
