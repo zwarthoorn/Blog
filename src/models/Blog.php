@@ -25,4 +25,8 @@ class Blog extends Model {
 		$backarray = ['blogpost'=>$blogpost,'response'=>$response];
 		return $backarray;
 	}
+	public function allBlogs()
+	{
+		return Self::all()->toArray();
+	}
 }

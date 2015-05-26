@@ -39,3 +39,26 @@ first you add this to the required field in your json file
 'Response'=> 'Zwarthoorn\Blog\Facades\Response'
 ```
 
+
+
+## usage
+
+first of all all blogpost will be maneged in the full admin panel and you dont have to worry about them
+
+Now for getting the blog post we are going to runn a simple command thare are facades so it will not be that hard
+
+if you want to have a blogpost you need to use Blog like so;
+
+```php
+use Blog
+```
+
+afther this you have 3 options first getting all the blogpost
+this will give you all the post on order of submittet.
+
+```php
+Blog::allBlogs();
+```
+this will be a clean array with all the blogpost you have in your database.
+(functions for publish and concept are not done yet so it will not be a factor for now)
+
